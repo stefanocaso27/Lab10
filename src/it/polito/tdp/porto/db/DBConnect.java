@@ -3,15 +3,13 @@ package it.polito.tdp.porto.db;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-import javax.sql.DataSource;
-
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
 
 
 public class DBConnect {
 
-	private static String jdbcURL = "jdbc:mysql://localhost/porto2015";
+	private static String jdbcURL = "jdbc:mysql://localhost/porto2015?serverTimezone=Europe/Rome";
 	private static HikariDataSource ds;
 
 	public static Connection getConnection() {
@@ -20,7 +18,7 @@ public class DBConnect {
 			HikariConfig config = new HikariConfig();
 			config.setJdbcUrl(jdbcURL);
 			config.setUsername("root");
-			config.setPassword("");
+			config.setPassword("root");
 			
 			// configurazione MySQL
 			config.addDataSourceProperty("cachePrepStmts", "true");

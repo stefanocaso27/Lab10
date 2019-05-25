@@ -44,9 +44,9 @@ public class Author {
 
 	@Override
 	public String toString() {
-		return "Author [id=" + id + ", lastname=" + lastname + ", firstname=" + firstname + "]";
+		return "Author: " + id + "\n";
 	}
-
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
